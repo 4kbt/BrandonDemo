@@ -1,6 +1,6 @@
-all: $(shell ls f*.txt -1 | sed 's/txt/out/')
+all: $(shell ls f*.txt -1 | sed 's/txt/txt.out/')
 
-%.out : %.txt fbmc18.sh
+%.txt.out : %.txt fbmc18.sh
 	./fbmc18.sh $< > $@
 
 stuff.txt: Makefile 
